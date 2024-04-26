@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+  /* PRIMARY */
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  /* NEUTRAL */
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+
+  --fs-xl: 2rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+  --ff-headings: 'Young Serif', serif;
+  --ff: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  color: var(--wenge-brown);
+  font-family: var(--ff);
+  padding: 0 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+main img {
+  max-width: calc(100% + 4rem);
+  height: auto;
+  margin: 0 -2rem;
+}
+
+main h1 {
+  color: var(--dark-charcoal);
+  font-family: var(--ff-headings);
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+
+main p {
+  color: var(--wenge-brown);
+  font-size: 1rem;
+  text-align: start;
+}
+
+article {
+  background-color: var(--rose-white);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+article h3 {
+  color: var(--dark-raspberry);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+li::marker {
+  font-size: 0.75rem;
+}
+
+article ul {
+  margin: 1rem 0 0 1.25rem;
+}
+
+article ul li {
+  padding-left: 1rem;
+}
+
+article ul li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+article ul li::marker {
+  color: var(--dark-raspberry);
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 1rem;
+}
+
+section h2 {
+  font-family: var(--ff-headings);
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: var(--nutmeg);
+  margin-bottom: 1rem;
+}
+
+section ul,
+section ol {
+  margin-left: 1.5rem;
+}
+
+section ul li,
+section ol li {
+  padding-left: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+section ul li::marker,
+section ol li::marker {
+  color: var(--nutmeg);
+}
+
+section ol li::marker {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr td:nth-child(2) {
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+
+td {
+  padding: 0.75rem 1.5rem;
+}
+
+tr:not(:last-child) td {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.attribution {
+  display: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* LARGER SCREEN */
+@media screen and (min-width: 735px) {
+  body {
+    background-color: var(--eggshell);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8rem 0;
+  }
+
+  main {
+    background-color: var(--white);
+    width: 735px;
+    border-radius: 1.5rem;
+    padding: 2rem;
+  }
+
+  main img {
+    object-fit: cover;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+  }
+}
